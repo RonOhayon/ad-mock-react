@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 const clickData = [
-	{ name: "Only View", value: 35 },
-	{ name: "Clicked", value: 12 },
+	{ name1: "Only View", value: 35 },
+	{ name1: "Clicked", value: 12 },
 
 ];
 
@@ -29,7 +29,7 @@ const ViewsClickedCharts = () => {
 							outerRadius={80}
 							fill='#8884d8'
 							dataKey='value'
-							label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+							label={({ name1, percent }) => `${name1} ${(percent * 100).toFixed(0)}%`}
 						>
 							{clickData.map((entry, index) => (
 								<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
